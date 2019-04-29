@@ -62,25 +62,25 @@ public class Endangered extends Animals {
     }
   }
 
-//   public void updateHealth(String health) {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "UPDATE endangered_animals SET health=:health WHERE id=:id;";
-//       con.createQuery(sql)
-//         .addParameter("id", id)
-//         .addParameter("health", health)
-//         .executeUpdate();
-//     }
-//   }
+  public void updateHealth(String health) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "UPDATE endangered_animals SET health=:health WHERE id=:id;";
+      con.createQuery(sql)
+        .addParameter("id", id)
+        .addParameter("health", health)
+        .executeUpdate();
+    }
+  }
 
-//   public void updateAge(String age) {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "UPDATE endangered_animals SET age=:age WHERE id=:id;";
-//       con.createQuery(sql)
-//         .addParameter("age", age)
-//         .addParameter("id", id)
-//         .executeUpdate();
-//     }
-//   }
+  public void updateAge(String age) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "UPDATE endangered_animals SET age=:age WHERE id=:id;";
+      con.createQuery(sql)
+        .addParameter("age", age)
+        .addParameter("id", id)
+        .executeUpdate();
+    }
+  }
 
 //   public List<Sighting> getSightings() {
 //     try(Connection con = DB.sql2o.open()) {
