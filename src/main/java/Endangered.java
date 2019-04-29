@@ -52,15 +52,15 @@ public class Endangered extends Animals {
     }
   }
 
-//   public static Endangered find(int id) {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "SELECT * FROM endangered_animals WHERE id=:id;";
-//       Endangered Endangered = con.createQuery(sql)
-//         .addParameter("id", id)
-//         .executeAndFetchFirst(Endangered.class);
-//       return Endangered;
-//     }
-//   }
+  public static Endangered find(int id) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM endangered_animals WHERE id=:id;";
+      Endangered Endangered = con.createQuery(sql)
+        .addParameter("id", id)
+        .executeAndFetchFirst(Endangered.class);
+      return Endangered;
+    }
+  }
 
 //   public void updateHealth(String health) {
 //     try(Connection con = DB.sql2o.open()) {
