@@ -15,11 +15,11 @@ public class AnimalTest {
     assertEquals(true, testAnimal instanceof Animal);
   }
 
-//   @Test
-//   public void getName_animalInstantiatesWithName_Deer() {
-//     Animal testAnimal = new Animal("Deer");
-//     assertEquals("Deer", testAnimal.getName());
-//   }
+  @Test
+  public void getName_animalInstantiatesWithName_Deer() {
+    Animal testAnimal = new Animal("Deer");
+    assertEquals("Deer", testAnimal.getName());
+  }
 
 //   @Test
 //   public void equals_returnsTrueIfNameIsTheSame_false() {
