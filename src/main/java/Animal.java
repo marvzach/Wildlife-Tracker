@@ -57,23 +57,23 @@ public class Animal extends Animals {
     }
   }
 
-//   public void delete() {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "DELETE FROM animals WHERE id=:id;";
-//       con.createQuery(sql)
-//         .addParameter("id", id)
-//         .executeUpdate();
-//     }
-//   }
+  public void delete() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "DELETE FROM animals WHERE id=:id;";
+      con.createQuery(sql)
+        .addParameter("id", id)
+        .executeUpdate();
+    }
+  }
 
-//   public List<Sighting> getSightings() {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "SELECT * FROM sightings WHERE animal_id=:id;";
-//         List<Sighting> sightings = con.createQuery(sql)
-//           .addParameter("id", id)
-//           .executeAndFetch(Sighting.class);
-//       return sightings;
-//     }
-//   }
+  public List<Sighting> getSightings() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM sightings WHERE animal_id=:id;";
+        List<Sighting> sightings = con.createQuery(sql)
+          .addParameter("id", id)
+          .executeAndFetch(Sighting.class);
+      return sightings;
+    }
+  }
 
-// }
+}
