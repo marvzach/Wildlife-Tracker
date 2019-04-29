@@ -19,15 +19,15 @@ public class Animal extends Animals {
     }
   }
 
-//   public void save() {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "INSERT INTO animals (name) VALUES (:name);";
-//       this.id = (int) con.createQuery(sql, true)
-//         .addParameter("name", this.name)
-//         .executeUpdate()
-//         .getKey();
-//     }
-//   }
+  public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO animals (name) VALUES (:name);";
+      this.id = (int) con.createQuery(sql, true)
+        .addParameter("name", this.name)
+        .executeUpdate()
+        .getKey();
+    }
+  }
 
 //   public static List<Animal> all() {
 //     try(Connection con = DB.sql2o.open()) {
