@@ -22,24 +22,24 @@ public class App {
         String layout = "templates/layout.vtl";
 
 
-//          get("/", (request, response) -> {
-//       Map<String, Object> model = new HashMap<String, Object>();
-//       model.put("animals", Animal.all());
-//       model.put("endangeredAnimals", Endangered.all());
-//       model.put("sightings", Sighting.all());
-//       model.put("template", "templates/index.vtl");
-//       return new ModelAndView(model, layout);
-//     }, new VelocityTemplateEngine());
+         get("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("animals", Animal.all());
+      model.put("endangeredAnimals", Endangered.all());
+      model.put("sightings", Sighting.all());
+      model.put("template", "templates/index.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
 
-//          get("/sightings", (request, response) -> {
-//       Map<String, Object> model = new HashMap<String, Object>();
-//       model.put("animals", Animal.all());
-//       model.put("endangeredAnimals", Endangered.all());
-//       model.put("sightings", Sighting.all());
-//       model.put("template", "templates/sightings.vtl");
-//       return new ModelAndView(model, layout);
-//     }, new VelocityTemplateEngine());
+         get("/sightings", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("animals", Animal.all());
+      model.put("endangeredAnimals", Endangered.all());
+      model.put("sightings", Sighting.all());
+      model.put("template", "templates/sightings.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
 //          post("/endangered_sighting", (request, response) -> {
 //       Map<String, Object> model = new HashMap<String, Object>();
