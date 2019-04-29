@@ -37,6 +37,7 @@ In PSQL:
 There are no known bugs as at now but in case of any you may find please contact me.
 
 
+
 ## Technologies and language used
 This apllication was written using Java programming language.
 
