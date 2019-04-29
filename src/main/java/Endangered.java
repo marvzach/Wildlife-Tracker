@@ -32,25 +32,25 @@ public class Endangered extends Animals {
     }
   }
 
-//   public void save() {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "INSERT INTO endangered_animals (name, health, age) VALUES (:name, :health, :age);";
-//       this.id = (int) con.createQuery(sql, true)
-//         .addParameter("name", this.name)
-//         .addParameter("health", this.health)
-//         .addParameter("age", this.age)
-//         .executeUpdate()
-//         .getKey();
-//     }
-//   }
+  public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO endangered_animals (name, health, age) VALUES (:name, :health, :age);";
+      this.id = (int) con.createQuery(sql, true)
+        .addParameter("name", this.name)
+        .addParameter("health", this.health)
+        .addParameter("age", this.age)
+        .executeUpdate()
+        .getKey();
+    }
+  }
 
-//   public static List<Endangered> all() {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "SELECT * FROM endangered_animals;";
-//       return con.createQuery(sql)
-//         .executeAndFetch(Endangered.class);
-//     }
-//   }
+  public static List<Endangered> all() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM endangered_animals;";
+      return con.createQuery(sql)
+        .executeAndFetch(Endangered.class);
+    }
+  }
 
 //   public static Endangered find(int id) {
 //     try(Connection con = DB.sql2o.open()) {
