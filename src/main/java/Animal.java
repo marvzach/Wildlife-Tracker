@@ -29,23 +29,23 @@ public class Animal extends Animals {
     }
   }
 
-//   public static List<Animal> all() {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "SELECT * FROM animals;";
-//       return con.createQuery(sql)
-//         .executeAndFetch(Animal.class);
-//     }
-//   }
+  public static List<Animal> all() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM animals;";
+      return con.createQuery(sql)
+        .executeAndFetch(Animal.class);
+    }
+  }
 
-//   public static Animal find(int id) {
-//     try(Connection con = DB.sql2o.open()) {
-//       String sql = "SELECT * FROM animals WHERE id=:id;";
-//       Animal animal = con.createQuery(sql)
-//         .addParameter("id", id)
-//         .executeAndFetchFirst(Animal.class);
-//       return animal;
-//     }
-//   }
+  public static Animal find(int id) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM animals WHERE id=:id;";
+      Animal animal = con.createQuery(sql)
+        .addParameter("id", id)
+        .executeAndFetchFirst(Animal.class);
+      return animal;
+    }
+  }
 
 //   public void updateName(String name) {
 //     try(Connection con = DB.sql2o.open()) {
