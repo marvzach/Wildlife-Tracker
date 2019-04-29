@@ -1,36 +1,36 @@
-// import org.sql2o.*;
-// import java.util.ArrayList;
-// import java.util.List;
+import org.sql2o.*;
+import java.util.ArrayList;
+import java.util.List;
 
-// public class Endangered extends Animals {
-//   public boolean endangered;
-//   private String health;
-//   private String age;
+public class Endangered extends Animals {
+  public boolean endangered;
+  private String health;
+  private String age;
 
-//   public Endangered(String name, String health, String age) {
-//     this.name = name;
-//     this.id = id;
-//     this.health = health;
-//     this.age = age;
-//   }
+  public Endangered(String name, String health, String age) {
+    this.name = name;
+    this.id = id;
+    this.health = health;
+    this.age = age;
+  }
 
-//   public String getHealth() {
-//     return health;
-//   }
+  public String getHealth() {
+    return health;
+  }
 
-//   public String getAge() {
-//     return age;
-//   }
+  public String getAge() {
+    return age;
+  }
 
-//   @Override
-//   public boolean equals(Object otherEndangered) {
-//     if(!(otherEndangered instanceof Endangered)) {
-//       return false;
-//     } else {
-//       Endangered newEndangered = (Endangered) otherEndangered;
-//       return this.getName().equals(newEndangered.getName()) && this.getHealth().equals(newEndangered.getHealth()) && this.getAge().equals(newEndangered.getAge());
-//     }
-//   }
+  @Override
+  public boolean equals(Object otherEndangered) {
+    if(!(otherEndangered instanceof Endangered)) {
+      return false;
+    } else {
+      Endangered newEndangered = (Endangered) otherEndangered;
+      return this.getName().equals(newEndangered.getName()) && this.getHealth().equals(newEndangered.getHealth()) && this.getAge().equals(newEndangered.getAge());
+    }
+  }
 
 //   public void save() {
 //     try(Connection con = DB.sql2o.open()) {
