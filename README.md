@@ -54,5 +54,5 @@ In case of any questions or feedback or clarifications, you can reach me at:
 acerzach@gmail.com
 
 ### License
-*Licenced under the [MIT Licence](LICENCE).*
+*Licenced under the MIT Licence
 Copyright (c) 2019 **Marvin Zachary**
