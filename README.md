@@ -1,8 +1,8 @@
 # WILDLIFE TRACKER-Trace Park
-
 This is a java application used to track wildlife sightings in an area.
 
-#### By **Marvin Zachary**
+#### Author
+Marvin Zachary
 
 ## Description
 
